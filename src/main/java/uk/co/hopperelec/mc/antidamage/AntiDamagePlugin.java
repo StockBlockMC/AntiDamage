@@ -1,12 +1,13 @@
-package uk.co.hopperelec.mc.stockblockantidamage;
+package uk.co.hopperelec.mc.antidamage;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
-public final class Main extends JavaPlugin implements Listener {
+public final class AntiDamagePlugin extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
@@ -14,12 +15,12 @@ public final class Main extends JavaPlugin implements Listener {
     }
 
     @EventHandler
-    public void onEntityDamage(EntityDamageEvent event) {
+    public void onEntityDamage(@NotNull EntityDamageEvent event) {
         event.setCancelled(true);
     }
 
     @EventHandler
-    public void onEntityHunger(FoodLevelChangeEvent event) {
+    public void onEntityHunger(@NotNull FoodLevelChangeEvent event) {
         event.setCancelled(true);
     }
 }

@@ -1,8 +1,6 @@
-name: Antidamage
+name: ${project.name}
 version: ${project.version}
-main: uk.co.hopperelec.mc.stockblockantidamage.Main
-api-version: 1.17
+main: uk.co.hopperelec.mc.antidamage.AntiDamagePlugin
 prefix: AntiDamage
-authors: [ HopperElecYT ]
-description: Prevents hearts and hunger being lost in the StockBlock Hub
-website: hopperelec.co.uk
+authors: [ hopperelec ]
+description: ${project.description}
